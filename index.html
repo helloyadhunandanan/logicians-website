@@ -8,11 +8,11 @@
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%;
             font-family: 'Poppins', sans-serif;
             color: white;
             text-align: center;
             background-color: black;
+            overflow-x: hidden;
         }
 
         .video-container {
@@ -21,54 +21,47 @@
             left: 0;
             width: 100%;
             height: 100%;
-            overflow: hidden;
             z-index: -1;
         }
 
         .video-container video {
-            min-width: 100%;
-            min-height: 100%;
+            width: 100vw;
+            height: 100vh;
             object-fit: cover;
             filter: blur(2px) brightness(60%);
         }
 
         .navbar {
-            position: fixed;
-            top: 0;
+            position: relative;
             width: 100%;
-            padding: 5px 10px;
+            padding: 10px 15px;
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             display: flex;
             justify-content: center;
             align-items: center;
             z-index: 2;
-            font-weight: bold;
-            font-size: 10px;
+            font-size: 14px;
         }
 
         .logo {
-            font-size: 16px;
+            font-size: 20px;
             font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         .tagline {
-            font-size: 10px;
-            font-weight: normal;
+            font-size: 12px;
             color: #f4a261;
-            margin-top: 2px;
+            margin-top: 5px;
+            animation: slideIn 1.5s ease-in-out;
         }
 
-        .content {
+        .section {
             position: relative;
-            z-index: 1;
-            font-size: 1.5rem;
-            top: 40%;
-            transform: translateY(-50%);
-            animation: fadeIn 2s ease-in;
-            padding: 0 20px;
+            padding: 60px 20px;
+            animation: fadeInUp 1.5s ease-in-out;
         }
 
         .cta-button {
@@ -79,81 +72,73 @@
             border: none;
             border-radius: 20px;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: background 0.3s, transform 0.3s;
         }
 
         .cta-button:hover {
             background: #e76f51;
+            transform: scale(1.1);
         }
 
-        .nptel-section {
-            margin-top: 30px;
-            padding: 20px;
-        }
-
-        .nptel-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .nptel-container, .about-container, .contact-container {
+            margin-top: 20px;
         }
 
         .nptel-item {
             background: rgba(255, 255, 255, 0.1);
-            padding: 10px 20px;
-            margin: 10px;
+            padding: 10px;
+            margin: 10px auto;
             border-radius: 10px;
             width: 80%;
             max-width: 400px;
-            text-align: center;
-            transition: background 0.3s;
-        }
-
-        .nptel-item a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
+            transition: transform 0.3s;
         }
 
         .nptel-item:hover {
             background: #f4a261;
+            transform: scale(1.05);
         }
 
         .footer {
-            position: fixed;
-            bottom: 0;
             width: 100%;
             padding: 10px 0;
             background: rgba(255, 255, 255, 0.1);
-            color: white;
             text-align: center;
             font-size: 12px;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
         }
 
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                text-align: center;
-                padding: 5px;
-            }
-            .content {
-                font-size: 1.2rem;
-            }
-            .cta-button {
-                font-size: 14px;
-                padding: 8px 16px;
-            }
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
     </style>
 </head>
 <body>
     <div class="video-container">
         <video autoplay loop muted>
-            <source src="your-video.mp4" type="video/mp4">
+            <source src="hack.mp4" type="video/mp4">
         </video>
     </div>
     
@@ -164,13 +149,12 @@
         </div>
     </nav>
     
-    <div class="content">
+    <div class="section">
         <h1>Empower Your Tech Journey</h1>
         <p>Stay ahead with the latest tech resources and insights.</p>
-        <button class="cta-button">Explore Now</button>
     </div>
-    
-    <div class="nptel-section">
+
+    <div class="section">
         <h2>NPTEL Answers</h2>
         <div class="nptel-container">
             <div class="nptel-item"><a href="joy_of_computing.html">Joy of Computing - IIT Madras</a></div>
@@ -178,7 +162,23 @@
             <div class="nptel-item"><a href="dbms_madras.html">DBMS - IIT Madras</a></div>
         </div>
     </div>
+
+    <div class="section about-container">
+        <h2>About Us</h2>
+        <p>We are a group of passionate individuals building various resources in the tech field.</p>
+    </div>
+
+    <div class="section contact-container">
+        <h2>Contact & Follow Us</h2>
+        <p>Email: contact@logicians.com</p>
+        <div class="social-icons">
+            <a href="#"><img src="instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="youtube.png" alt="YouTube"></a>
+            <a href="#"><img src="mail.png" alt="Email"></a>
+        </div>
+    </div>
     
     <div class="footer">© 2025 Logicians. All Rights Reserved | Follow us on Social Media</div>
 </body>
 </html>
+
