@@ -13,6 +13,7 @@
             font-family: 'Poppins', sans-serif;
             color: white;
             text-align: center;
+            background-color: black;
         }
 
         .video-container {
@@ -44,7 +45,7 @@
             align-items: center;
             z-index: 2;
             font-weight: bold;
-            font-size: 16px;
+            font-size: 14px;
         }
 
         .logo {
@@ -83,6 +84,12 @@
             color: #f4a261;
         }
 
+        .menu-icon {
+            display: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
         /* Dropdown Styles */
         .dropdown-content {
             display: none;
@@ -117,7 +124,7 @@
         .content {
             position: relative;
             z-index: 1;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             top: 50%;
             transform: translateY(-50%);
             animation: fadeIn 2s ease-in;
@@ -127,10 +134,10 @@
         .cta-button {
             background: #f4a261;
             color: black;
-            padding: 12px 25px;
-            font-size: 18px;
+            padding: 10px 20px;
+            font-size: 16px;
             border: none;
-            border-radius: 25px;
+            border-radius: 20px;
             cursor: pointer;
             transition: background 0.3s;
         }
@@ -144,13 +151,10 @@
             bottom: 0;
             width: 100%;
             padding: 10px 0;
-            background: rgba(0, 0, 0, 0.8);
-            font-size: 14px;
-        }
-
-        .social-links img {
-            width: 20px;
-            margin: 0 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-align: center;
+            font-size: 12px;
         }
 
         @keyframes fadeIn {
@@ -162,20 +166,33 @@
             .navbar {
                 flex-direction: column;
                 text-align: center;
+                padding: 10px;
+            }
+            .menu-icon {
+                display: block;
             }
             .nav-links {
+                display: none;
                 flex-direction: column;
                 padding-top: 10px;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.9);
+                position: absolute;
+                top: 40px;
+                left: 0;
+            }
+            .nav-links.show {
+                display: flex;
             }
             .nav-links li {
-                margin: 5px 0;
+                margin: 10px 0;
             }
             .content {
-                font-size: 1.5rem;
+                font-size: 1.2rem;
             }
             .cta-button {
-                font-size: 16px;
-                padding: 10px 20px;
+                font-size: 14px;
+                padding: 8px 16px;
             }
         }
     </style>
@@ -183,7 +200,7 @@
 <body>
     <div class="video-container">
         <video autoplay loop muted>
-            <source src="hack.mp4" type="video/mp4">
+            <source src="your-video.mp4" type="video/mp4">
         </video>
     </div>
     
@@ -192,6 +209,7 @@
             <h1 class="logo">Logicians</h1>
             <p class="tagline">Where Logic Meets Innovation</p>
         </div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
         <ul class="nav-links">
             <li><a href="about.html">About</a></li>
             <li>
@@ -202,26 +220,21 @@
                     <a href="dbms_madras.html">DBMS - IIT Madras</a>
                 </div>
             </li>
-            <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
-            <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
-            <li><a href="https://youtube.com" target="_blank">YouTube</a></li>
         </ul>
     </nav>
     
     <div class="content">
-        <h1>LOGICIANS</h1>
+        <h1>Empower Your Tech Journey</h1>
         <p>Stay ahead with the latest tech resources and insights.</p>
-        <p>Powered by CETKR CSEB 2023-27 – Learn, Explore, Innovate!</p>
         <button class="cta-button">Explore Now</button>
     </div>
+    
+    <div class="footer">© 2025 Logicians. All Rights Reserved | Follow us on Social Media</div>
 
-    <footer class="footer">
-        <p>&copy; 2025 Logicians. All Rights Reserved.</p>
-        <div class="social-links">
-            <img src="download.jfif" alt="Instagram">
-            <img src="twitter-icon.png" alt="Twitter">
-            <img src="youtube-icon.png" alt="YouTube">
-        </div>
-    </footer>
+    <script>
+        function toggleMenu() {
+            document.querySelector(".nav-links").classList.toggle("show");
+        }
+    </script>
 </body>
 </html>
