@@ -9,7 +9,6 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            overflow: hidden;
             font-family: 'Poppins', sans-serif;
             color: white;
             text-align: center;
@@ -37,7 +36,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 10px 15px;
+            padding: 8px 15px;
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             display: flex;
@@ -45,80 +44,21 @@
             align-items: center;
             z-index: 2;
             font-weight: bold;
-            font-size: 14px;
+            font-size: 12px;
         }
 
         .logo {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
 
         .tagline {
-            font-size: 12px;
+            font-size: 10px;
             font-weight: normal;
             color: #f4a261;
-            margin-top: 3px;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            padding: 0;
-            margin: 0;
-        }
-
-        .nav-links li {
-            margin: 0 10px;
-            position: relative;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #f4a261;
-        }
-
-        .menu-icon {
-            display: none;
-            font-size: 20px;
-            cursor: pointer;
-        }
-
-        /* Dropdown Styles */
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(5px);
-            border-radius: 5px;
-            text-align: left;
-            min-width: 220px;
-            padding: 10px 0;
-        }
-
-        .dropdown-content a {
-            display: block;
-            color: white;
-            padding: 8px 15px;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .dropdown-content a:hover {
-            background: #f4a261;
-            color: black;
-        }
-
-        .nav-links li:hover .dropdown-content {
-            display: block;
+            margin-top: 2px;
         }
 
         .content {
@@ -146,6 +86,38 @@
             background: #e76f51;
         }
 
+        .nptel-section {
+            margin-top: 100px;
+            padding: 20px;
+        }
+
+        .nptel-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .nptel-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+            transition: background 0.3s;
+        }
+
+        .nptel-item a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .nptel-item:hover {
+            background: #f4a261;
+        }
+
         .footer {
             position: fixed;
             bottom: 0;
@@ -166,26 +138,7 @@
             .navbar {
                 flex-direction: column;
                 text-align: center;
-                padding: 10px;
-            }
-            .menu-icon {
-                display: block;
-            }
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                padding-top: 10px;
-                width: 100%;
-                background: rgba(0, 0, 0, 0.9);
-                position: absolute;
-                top: 40px;
-                left: 0;
-            }
-            .nav-links.show {
-                display: flex;
-            }
-            .nav-links li {
-                margin: 10px 0;
+                padding: 8px;
             }
             .content {
                 font-size: 1.2rem;
@@ -200,7 +153,7 @@
 <body>
     <div class="video-container">
         <video autoplay loop muted>
-            <source src="hack.mp4" type="video/mp4">
+            <source src="your-video.mp4" type="video/mp4">
         </video>
     </div>
     
@@ -209,18 +162,6 @@
             <h1 class="logo">Logicians</h1>
             <p class="tagline">Where Logic Meets Innovation</p>
         </div>
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
-        <ul class="nav-links">
-            <li><a href="about.html">About</a></li>
-            <li>
-                <a href="#">NPTEL Answers</a>
-                <div class="dropdown-content">
-                    <a href="joy_of_computing.html">Joy of Computing - IIT Madras</a>
-                    <a href="dbms_kharagpur.html">DBMS - IIT Kharagpur</a>
-                    <a href="dbms_madras.html">DBMS - IIT Madras</a>
-                </div>
-            </li>
-        </ul>
     </nav>
     
     <div class="content">
@@ -229,12 +170,15 @@
         <button class="cta-button">Explore Now</button>
     </div>
     
+    <div class="nptel-section">
+        <h2>NPTEL Answers</h2>
+        <div class="nptel-container">
+            <div class="nptel-item"><a href="joy_of_computing.html">Joy of Computing - IIT Madras</a></div>
+            <div class="nptel-item"><a href="dbms_kharagpur.html">DBMS - IIT Kharagpur</a></div>
+            <div class="nptel-item"><a href="dbms_madras.html">DBMS - IIT Madras</a></div>
+        </div>
+    </div>
+    
     <div class="footer">© 2025 Logicians. All Rights Reserved | Follow us on Social Media</div>
-
-    <script>
-        function toggleMenu() {
-            document.querySelector(".nav-links").classList.toggle("show");
-        }
-    </script>
 </body>
 </html>
