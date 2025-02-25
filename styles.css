@@ -85,4 +85,17 @@
         50% { transform: scale(1.1); }
         100% { transform: scale(1); }
     }
+    .copyright{
+        background-color: #000000; 
+        color: #ffffff; 
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }      
+   
 </style>
