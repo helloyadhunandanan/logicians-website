@@ -3,182 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logicians - Elevate Your Tech Knowledge</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif;
-            color: white;
-            text-align: center;
-            background-color: rgb(2, 0, 0);
-            overflow-x: hidden;
-        }
-
-        .video-container {
-            position: fixed;
-            top: 00;
-            left: 50;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
-        .video-container video {
-            width: 100vw;
-            height: 100vh;
-            object-fit: cover;
-            filter: blur(2px) brightness(60%);
-        }
-
-        .navbar {
-            position: relative;
-            width: 100%;
-            padding: 10px 15px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 2;
-            font-size: 14px;
-        }
-
-        .logo {
-            font-size: 20px;
-            font-weight: bold;
-            text-transform: uppercase;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-
-        .tagline {
-            font-size: 12px;
-            color: #f4a261;
-            margin-top: 5px;
-            animation: slideIn 1.5s ease-in-out;
-        }
-
-        .section {
-            position: relative;
-            padding: 60px 20px;
-            animation: fadeInUp 1.5s ease-in-out;
-        }
-
-        .cta-button {
-            background: #f4a261;
-            color: black;
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: background 0.3s, transform 0.3s;
-        }
-
-        .cta-button:hover {
-            background: #e76f51;
-            transform: scale(1.1);
-        }
-
-        .nptel-container, .about-container, .contact-container {
-            margin-top: 20px;
-        }
-
-        .nptel-item {
-            background: rgba(33, 214, 123, 0.1);
-            padding: 10px;
-            margin: 10px auto;
-            border-radius: 10px;
-            width: 80%;
-            max-width: 400px;
-            transition: transform 0.3s;
-        }
-
-        .nptel-item:hover {
-            background: #f4a261;
-            transform: scale(1.05);
-        }
-
-        .footer {
-            width: 100%;
-            padding: 10px 0;
-            background: rgba(255, 255, 255, 0.1);
-            text-align: center;
-            font-size: 12px;
-        }
-
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 10px;
-        }
-
-        .social-icons img {
-            width: 30px;
-            height: 30px;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideIn {
-            from { transform: translateY(-20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        @keyframes fadeInUp {
-            from { transform: translateY(30px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-    </style>
+    <title>Logicians</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="video-container">
-        <video autoplay loop muted>
-            <source src="hack.mp4" type="video/mp4">
-        </video>
-    </div>
-    
     <nav class="navbar">
-        <div>
-            <h1 class="logo">Logicians</h1>
-            <p class="tagline">Where Logic Meets Innovation</p>
+        <div class="logo">Logicians</div>
+        <div class="nav-links">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT US</a>
         </div>
     </nav>
     
-    <div class="section">
-        <h1>LOGICIANS</h1>
-        <p>Crafted by CETKR CSEB 2023-27</p>
-    </div>
-
-    <div class="section">
-        <h2>NPTEL Answers</h2>
-        <div class="nptel-container">
-            <div class="nptel-item"><a href="joy_of_computing.html">Joy of Computing - IIT Madras</a></div>
-            <div class="nptel-item"><a href="dbms_kharagpur.html">DBMS - IIT Kharagpur</a></div>
-            <div class="nptel-item"><a href="dbms_madras.html">DBMS - IIT Madras</a></div>
-        </div>
-    </div>
-
-    <div class="section about-container">
-        <h2>About Us</h2>
-        <p>We are a group of passionate individuals building various resources in the tech field.</p>
-    </div>
-
-    <div class="section contact-container">
-        <h2>Contact & Follow Us</h2>
-        <p>Email:logicians1011@gmail.com</p>
-        <div class="social-icons">
-            <a href="#"><img src="instagram.png" alt="Instagram"></a>
-            <a href="#"><img src="youtube.png" alt="YouTube"></a>
-            <a href="#"><img src="mail.png" alt="Email"></a>
-        </div>
-    </div>
+    <section id="home" class="hero">
+        <h1 class="animated-text">Welcome to Logicians</h1>
+        <p class="motto">Where Logic Meets Innovation</p>
+        <a href="nptel.html" class="nptel-btn">NPTEL Answers</a>
+    </section>
     
-    <div class="footer">© 2025 Logicians. All Rights Reserved | Follow us on Social Media</div>
+    <section id="about">
+        <h1>About Us</h1>
+        <p>Our website is crafted by CETKR CSEB 2023-27, a community for improving tech and more.</p>
+    </section>
 </body>
 </html>
-
