@@ -86,10 +86,15 @@
         100% { transform: scale(1); }
     }
     .copyright{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: blACK;
+       background-color: #000000; /* black background for copyright */
+        color: #ffffff; /* white text for the copyright */
+     padding: 10px 20px; /* some padding around the text */
+     text-align: center; /* center the text */
+     position: fixed; /* fix the copyright at the bottom of the page */
+     bottom: 0; /* place it at the bottom */
+     left: 0; /* align it to the left */
+     width: 100%; /* full width */
+     font-size: 14px; 
     }      
    
 </style>
