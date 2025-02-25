@@ -1,0 +1,88 @@
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        text-align: center;
+    }
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: blue;
+        padding: 15px;
+    }
+    .logo {
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        margin-left: 15px;
+        font-size: 16px;
+    }
+    .hero {
+        margin-top: 50px;
+        padding: 50px 20px;
+    }
+    .animated-text {
+        font-size: 28px;
+        font-weight: bold;
+        animation: fadeIn 2s ease-in-out;
+    }
+    .motto {
+        font-size: 18px;
+        color: gray;
+        margin-top: 10px;
+    }
+    .nptel-btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 24px;
+        background-color: blue;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        animation: pulse 1.5s infinite;
+    }
+    .nptel-btn:hover {
+        background-color: darkblue;
+        transform: scale(1.05);
+    }
+    .course-btn {
+        display: block;
+        width: 80%;
+        max-width: 300px;
+        margin: 10px auto;
+        padding: 15px;
+        background-color: darkblue;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+    .course-btn:hover {
+        background-color: navy;
+        transform: scale(1.05);
+    }
+    @keyframes fadeIn {
+        0% { opacity: 0; transform: translateY(-10px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+</style>
