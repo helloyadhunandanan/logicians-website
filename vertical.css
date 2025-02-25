@@ -1,0 +1,38 @@
+.week-selection {
+    text-align: center;
+    margin: 20px;
+}
+
+.week-buttons {
+    display: flex;
+    flex-direction: column;  /* Makes buttons appear one below the other */
+    align-items: center;
+    gap: 15px; /* Space between buttons */
+}
+
+.week-button {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 80%;
+    max-width: 300px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.week-button:hover {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Click Animation */
+.week-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
