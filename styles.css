@@ -139,7 +139,9 @@
 .social-links:hover:before {
   transform: skewX(45deg) translateX(calc(var(--width) * -1 - 50%));
 }       
-
+.social-links > * {
+  opacity: 0.8;
+}
 
 
    
