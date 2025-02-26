@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Assignment</title>
+    <link rel="stylesheet" href="programmingstyles.css">
+</head>
+<body>
+
+    <h1>Python Programming Assignment</h1>
+
+    <div class="question-section">
+        <h2>Question 1:</h2>
+        <p>Write a Python program to find the factorial of a number.</p>
+        <textarea id="code1" class="code-area" placeholder="Paste your Python program here..."></textarea>
+        <button onclick="copyCode('code1')">Copy</button>
+        <button onclick="downloadCode('code1', 'factorial.py')">Download</button>
+    </div>
+
+    <div class="question-section">
+        <h2>Question 2:</h2>
+        <p>Write a Python program to check if a number is prime.</p>
+        <textarea id="code2" class="code-area" placeholder="Paste your Python program here..."></textarea>
+        <button onclick="copyCode('code2')">Copy</button>
+        <button onclick="downloadCode('code2', 'prime.py')">Download</button>
+    </div>
+
+    <div class="question-section">
+        <h2>Question 3:</h2>
+        <p>Write a Python program to print the Fibonacci sequence up to N terms.</p>
+        <textarea id="code3" class="code-area" placeholder="Paste your Python program here..."></textarea>
+        <button onclick="copyCode('code3')">Copy</button>
+        <button onclick="downloadCode('code3', 'fibonacci.py')">Download</button>
+    </div>
+
+    <!-- Copyright & Credits -->
+    <div class="copyright">
+        <p>© 2025 Logicians. All Rights Reserved.</p>
+    </div>
+    <div class="crafted-by">
+        <p>This website is crafted and maintained by CETKR CSEB 2023-27</p>
+    </div>
+
+    <script>
+        function copyCode(id) {
+            let codeArea = document.getElementById(id);
+            codeArea.select();
+            document.execCommand("copy");
+            alert("Code copied!");
+        }
+
+        function downloadCode(id, filename) {
+            let code = document.getElementById(id).value;
+            let blob = new Blob([code], { type: "text/plain" });
+            let link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = filename;
+            link.click();
+        }
+    </script>
+
+</body>
+</html>
