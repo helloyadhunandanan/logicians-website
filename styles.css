@@ -38,8 +38,9 @@
     }
     .motto {
         font-size: 18px;
-        color: gray;
-        margin-top: 10px;
+    color: #ffffff; /* Change to white or any contrasting color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional: Add shadow for better contrast */
+    margin-top: 10px;
     }
     .nptel-btn {
         display: inline-block;
