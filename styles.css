@@ -90,11 +90,10 @@
      color: #ffffff; /* white text for the copyright */
      padding: 10px 20px; /* some padding around the text */
      text-align: center; /* center the text */
-     position: fixed; /* fix the copyright at the bottom of the page */
-     bottom: 0; /* place it at the bottom */
-     left: 0; /* align it to the left */
-     width: 100%; /* full width */
-     font-size: 14px; 
+     position: relative; /* fix the copyright at the bottom of the page */
+      width: 100%; /* full width */
+     font-size: 14px;
+      margin-top: 20px; 
     } 
     .social-links{
      --width: 100px;
