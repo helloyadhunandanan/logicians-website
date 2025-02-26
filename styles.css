@@ -123,7 +123,7 @@
     object-fit: cover;
     border-radius: 50%;
     transition: transform 0.3s ease;
-    margin: 0 15px;
+    
 }
 
 .social-links a:hover img {
