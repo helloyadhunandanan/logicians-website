@@ -121,6 +121,27 @@
     transform: translateY(-10px) scale(1.1);
     color: #ff0000;
 }
+.social-links a {
+    color: #333; /* Dark grey for visibility */
+    text-decoration: none;
+    font-size: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1); /* Light grey background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-10px) scale(1.1);
+    color: #000; /* Slightly darker on hover */
+    background: rgba(0, 0, 0, 0.2); /* Darker background on hover */
+}
+
 
      .social-links, .social-links * {
   box-sizing: border-box;
