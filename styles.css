@@ -218,6 +218,40 @@ footer {
     66% { background-image: url('images/photo_6192524405205222002_y.jpg'); }
     100% { background-image: url('images/photo_6192524405205222001_y.jpg'); }
 }
+.footer {
+    padding-bottom: 60px; /* Add space to prevent overlap */
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px; /* Add space below icons */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.copyright {
+    font-size: 12px; /* Smaller text on mobile */
+    padding: 10px;
+    background-color: #000000;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .social-links {
+        gap: 10px; /* Reduce gap on smaller screens */
+    }
+
+    .social-links a {
+        width: 40px;
+        height: 40px;
+    }
+}
 
    
 </style>
