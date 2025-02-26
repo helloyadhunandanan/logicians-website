@@ -191,19 +191,21 @@ footer {
 
 .hero-slider .background-slider {
    
+  
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;  /* Make it span the full width */
-    height: 40%;  /* Adjust the height for a rectangular shape */
-    transform: translate(-50%, -50%);
+    top: -20%;          /* Move up to cover more above */
+    left: 0;
+    width: 100%;        /* Full width */
+    height: 140%;       /* Increase height to cover more below */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: -1;
+    z-index: -1;        /* Behind text */
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     animation: slideBackground 15s infinite;
+
+
 
 
 }
