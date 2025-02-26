@@ -115,6 +115,7 @@
     transition: transform 0.3s ease;
     border-radius: 50%;
     overflow: hidden;
+   margin: 0 10px;
 }
 
 .social-links img {
