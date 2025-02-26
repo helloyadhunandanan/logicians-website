@@ -168,10 +168,8 @@ footer {
         transform: scale(1.1);
     }
 }
-.social-links {
-    background: yellow;
-    padding: 10px;
-}
+
+
 @media screen and (min-width: 768px) {
     .footer {
         padding-bottom: 100px;  /* Increase space for larger screens */
