@@ -96,7 +96,7 @@
      width: 100%; /* full width */
      font-size: 14px; 
     } 
-    .social-box{
+    .social-links{
       --width: 100px;
        width: var(--width);
         height: var(--width);
