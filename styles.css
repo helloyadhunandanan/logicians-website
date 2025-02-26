@@ -95,28 +95,33 @@
      font-size: 14px;
       margin-top: 20px; 
     } 
-    .social-links{
-     --width: 100px;
-  width: var(--width);
-  height: var(--width);
-  color: #fff;
-  font-size: 30px;
-  border-radius: 10px; /* More rounded corners for the glass effect */
-  background: rgba(255, 255, 255, 0.1); /* Slightly more transparent background for the glassy look */
-  backdrop-filter: blur(8px); /* Stronger blur for a more prominent glass effect */
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-right-color: rgba(255, 255, 255, 0.1);
-  border-bottom-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
-  text-decoration: none;
-  margin: 20px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative; /* Ensure the before pseudo-element is positioned correctly */
-  transition: transform 200ms ease-in-out; /* Smooth transform on hover */
-   }
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-link {
+    --width: 80px;
+    width: var(--width);
+    height: var(--width);
+    color: #fff;
+    font-size: 30px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 200ms ease-in-out;
+}
+
+.social-link:hover {
+    transform: translateY(-10px) scale(1.1);
+    color: #ff0000;
+}
+
      .social-links, .social-links * {
   box-sizing: border-box;
   transition: 200ms ease-in-out;
