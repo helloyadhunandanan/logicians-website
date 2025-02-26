@@ -115,8 +115,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-}
-      
+   }
+     .social-links, .social-links * {
+  box-sizing: border-box;
+  transition: 200ms;
+} 
           
 
 
