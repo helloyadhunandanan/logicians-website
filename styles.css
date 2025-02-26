@@ -172,7 +172,15 @@ footer {
     background: yellow;
     padding: 10px;
 }
-
+@media screen and (min-width: 768px) {
+    .footer {
+        padding-bottom: 100px;  /* Increase space for larger screens */
+    }
+    
+    .social-links {
+        margin-bottom: 40px; /* Extra space for visibility */
+    }
+}
 
    
 </style>
