@@ -179,6 +179,38 @@ footer {
         margin-bottom: 40px; /* Extra space for visibility */
     }
 }
+.hero-slider {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-slider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    animation: slideBackground 15s infinite;
+    transition: background-image 1s ease-in-out;
+}
+
+@keyframes slideBackground {
+    0% { background-image: url('images/photo_6192524405205222010_y.jpg'); }
+    33% { background-image: url('images/photo_6192524405205222000_y.jpg'); }
+    66% { background-image: url('images/photo_6192524405205222002_y.jpg'); }
+    100% { background-image: url('images/photo_6192524405205222001_y.jpg'); }
+}
 
    
 </style>
